@@ -15,7 +15,7 @@ from pathlib import Path
 from functools import partial
 
 from nbeats_lstm_model import NBeats, NBeatsBlock, IdentityBasis, TrendBasis, SeasonalityBasis
-from nbeats_lstm_model import ExogenousBasisInterpretable, ExogenousBasisWavenet, ExogenousBasisTCN, ExogenousBasisLSTM
+from nbeats_lstm_model import ExogenousBasisLSTM
 from nbeatsx_lstm_loader import TimeSeriesLoader
 from nbeatsx_lstm_losses import MAPELoss, MASELoss, SMAPELoss, MSELoss, MAELoss, PinballLoss
 from nbeatsx_lstm_metrics import *
@@ -329,46 +329,6 @@ class Nbeats(object):
                                                    batch_normalization=batch_normalization_block,
                                                    dropout_prob=self.dropout_prob_theta,
                                                    activation=self.activation)
-                    elif self.stack_types[i] == self.EXOGENOUS_BLOCK:
-                        nbeats_block = NBeatsBlock(x_t_n_inputs=x_t_n_inputs,
-                                                   x_s_n_inputs=self.n_x_s,
-                                                   x_s_n_hidden=self.x_s_n_hidden,
-                                                   theta_n_dim=2 * self.n_x_t,
-                                                   basis=ExogenousBasisInterpretable(),
-                                                   n_layers=self.n_layers[i],
-                                                   theta_n_hidden=self.n_hidden[i],
-                                                   include_var_dict=self.include_var_dict,
-                                                   t_cols=self.t_cols,
-                                                   batch_normalization=batch_normalization_block,
-                                                   dropout_prob=self.dropout_prob_theta,
-                                                   activation=self.activation)
-                    elif self.stack_types[i] == self.EXOGENOUS_TCN_BLOCK:
-                        nbeats_block = NBeatsBlock(x_t_n_inputs=x_t_n_inputs,
-                                                   x_s_n_inputs=self.n_x_s,
-                                                   x_s_n_hidden=self.x_s_n_hidden,
-                                                   theta_n_dim=2 * self.exogenous_n_channels,
-                                                   basis=ExogenousBasisTCN(self.exogenous_n_channels, self.n_x_t),
-                                                   n_layers=self.n_layers[i],
-                                                   theta_n_hidden=self.n_hidden[i],
-                                                   include_var_dict=self.include_var_dict,
-                                                   t_cols=self.t_cols,
-                                                   batch_normalization=batch_normalization_block,
-                                                   dropout_prob=self.dropout_prob_theta,
-                                                   activation=self.activation)
-                    elif self.stack_types[i] == self.EXOGENOUS_WAVENET_BLOCK:
-                        nbeats_block = NBeatsBlock(x_t_n_inputs=x_t_n_inputs,
-                                                   x_s_n_inputs=self.n_x_s,
-                                                   x_s_n_hidden=self.x_s_n_hidden,
-                                                   theta_n_dim=2 * self.exogenous_n_channels,
-                                                   basis=ExogenousBasisWavenet(self.exogenous_n_channels, self.n_x_t),
-                                                   n_layers=self.n_layers[i],
-                                                   theta_n_hidden=self.n_hidden[i],
-                                                   include_var_dict=self.include_var_dict,
-                                                   t_cols=self.t_cols,
-                                                   batch_normalization=batch_normalization_block,
-                                                   dropout_prob=self.dropout_prob_theta,
-                                                   activation=self.activation)
-                        self.blocks_regularizer[-1] = 1
                     elif self.stack_types[i] == self.EXOGENOUS_LSTM_BLOCK:  # New block type
                         nbeats_block = NBeatsBlock(x_t_n_inputs=x_t_n_inputs,
                                                    x_s_n_inputs=self.n_x_s,

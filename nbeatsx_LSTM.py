@@ -149,7 +149,7 @@ model = Nbeats(input_size_multiplier=7,  # Last 7 days
 model.fit(train_ts_loader=train_loader, val_ts_loader=val_loader, eval_steps=50)
 # 保存模型的状态字典
 model_dir = 'model'  # 指定保存模型的路径
-model_id = 'nbeats_lstm_model'  # 给模型命名
+model_id = 'nbeats_1'  # 给模型命名
 print(time)
 # 保存模型
 model.save(model_dir, model_id)
