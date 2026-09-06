@@ -1,0 +1,16 @@
+scope,change_group,model,n,MAE_ratio_to_persistence,RMSE_ratio_to_persistence
+faithful_table_vii_28d,quiet,lstm,12,8.74991556,11.22581933
+faithful_table_vii_28d,quiet,nbeatsx,12,4.36208500,5.66757161
+faithful_table_vii_28d,quiet,nbeatsx_lstm,12,2.55960111,4.64558817
+faithful_table_vii_28d,quiet,persistence,12,1.00000000,1.00000000
+faithful_table_vii_28d,quiet,tcn,12,8.13951444,9.54666539
+faithful_table_vii_28d,medium,lstm,6,3.31077524,3.94153141
+faithful_table_vii_28d,medium,nbeatsx,6,0.87508286,1.10051773
+faithful_table_vii_28d,medium,nbeatsx_lstm,6,1.29785476,2.07222574
+faithful_table_vii_28d,medium,persistence,6,1.00000000,1.00000000
+faithful_table_vii_28d,medium,tcn,6,7.02232571,7.58369082
+faithful_table_vii_28d,volatile,lstm,10,1.34563848,1.41631132
+faithful_table_vii_28d,volatile,nbeatsx,10,0.92373242,1.07609268
+faithful_table_vii_28d,volatile,nbeatsx_lstm,10,0.87129612,0.85509383
+faithful_table_vii_28d,volatile,persistence,10,1.00000000,1.00000000
+faithful_table_vii_28d,volatile,tcn,10,1.64124127,1.58260646

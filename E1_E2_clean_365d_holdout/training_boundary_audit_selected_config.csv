@@ -1,0 +1,13 @@
+run_id,model,variant,seed,train_end_date,validation_end_date,test_start_date,test_rows,test_used_for_training_or_selection,checkpoint
+nbeatsx_released_fixed_config_seed1,nbeatsx,released_fixed_config,1,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_released_fixed_config_seed1.pth
+nbeatsx_released_fixed_config_seed42,nbeatsx,released_fixed_config,42,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_released_fixed_config_seed42.pth
+nbeatsx_released_fixed_config_seed2024,nbeatsx,released_fixed_config,2024,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_released_fixed_config_seed2024.pth
+lstm_seed1,lstm,released_fixed_config,1,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\lstm_seed1.keras
+lstm_seed42,lstm,released_fixed_config,42,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\lstm_seed42.keras
+lstm_seed2024,lstm,released_fixed_config,2024,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\lstm_seed2024.keras
+tcn_seed1,tcn,released_fixed_config,1,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\tcn_seed1.keras
+tcn_seed42,tcn,released_fixed_config,42,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\tcn_seed42.keras
+tcn_seed2024,tcn,released_fixed_config,2024,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\tcn_seed2024.keras
+nbeatsx_lstm_lower_regularization_seed1,nbeatsx_lstm,lower_regularization,1,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_lstm_lower_regularization_seed1.pth
+nbeatsx_lstm_lower_regularization_seed42,nbeatsx_lstm,lower_regularization,42,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_lstm_lower_regularization_seed42.pth
+nbeatsx_lstm_lower_regularization_seed2024,nbeatsx_lstm,lower_regularization,2024,2021-05-24,2023-05-24,2023-05-25,365,False,F:\nbeatsx-lstm\E1_E2_clean_365d_holdout\checkpoints\nbeatsx_lstm_lower_regularization_seed2024.pth
